@@ -17,18 +17,18 @@ content3 = "창업은 쉬워요"
 view_count3 = 0
 
 # # Article class
-# class Article:
-#     title = "개발"
-#     author = "마르코"
-#     content = "개발은 쉬워요"
-#     view_count = 0
-#
-# article1 =Article()
-# print(article1.title)
-# article2 =Article()
-# article2.title = "코칭"
-# print(article1.title)
-# print(article2.title)
+class Article:
+    title = "개발"
+    author = "마르코"
+    content = "개발은 쉬워요"
+    view_count = 0
+
+article1 =Article()
+print(article1.title)
+article2 =Article()
+article2.title = "코칭"
+print(article1.title)
+print(article2.title)
 
 #### Article class with __init__
 class Article:
@@ -51,16 +51,16 @@ article1.read()
 print(article1.view_count)
 
 
-# #### Article class inheritance 상속
-# class BrunchArticle(Article):
-#     source = "브런치"
-#
-#     def read(self):
-#         self.view_count = self.view_count + 2
-#
-# brunch_article = BrunchArticle("개발", "개발은 쉬워요")
-# print(brunch_article.title)
-# print(brunch_article.source)
-# print(brunch_article.view_count)
-# brunch_article.read()
-# print(brunch_article.view_count)
+#### Article class inheritance 상속
+class BrunchArticle(Article):
+    source = "브런치"
+
+    def read(self):
+        self.view_count = self.view_count + 2
+
+brunch_article = BrunchArticle("개발", "개발은 쉬워요")
+print(brunch_article.title)
+print(brunch_article.source)
+print(brunch_article.view_count)
+brunch_article.read()
+print(brunch_article.view_count)
